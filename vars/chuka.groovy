@@ -14,7 +14,7 @@ def call(String stageName){
      }
    else if ("${stageName}" == "Upload Into UAT")
      {
-       deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://172.31.19.63:7000/')], contextPath: 'SEG-app', war: 'target/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://172.31.19.63:7000/')], contextPath: 'SEGA-app', war: 'target/*.war'
        }
   else if ("${stageName}" == "Approve")
      {
@@ -24,11 +24,11 @@ def call(String stageName){
      }
   else if ("${stageName}" == "Upload Into Prod")
      {
-       deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://172.31.19.63:7000/')], contextPath: 'SEG-app', war: 'target/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://172.31.19.63:7000/')], contextPath: 'SEGA-app', war: 'target/*.war'
        }
   else if ("${stageName}" == "Email Notification")
      {
-       emailext body: 'Build success!', subject: 'Project Status-SEG-app', to: 'chuksife@gmail.com' 
+       emailext body: 'Build success!', subject: 'Project Status-SEGA-app', to: 'chuksife@gmail.com' 
        }
 }
 
